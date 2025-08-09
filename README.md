@@ -13,7 +13,7 @@
 
 ---
 
-## Runbook visuel (figures commentées)
+## Runbook visuel 
 
 ### 1) Lancer l’infrastructure (Docker)
 **Figure 3 —** Après `docker-compose up -d`, tous les conteneurs sont **running/healthy** (Zookeeper, Kafka, Postgres, Spark master/worker).  
@@ -27,7 +27,7 @@
 **Figure 5 —** `python kafka_producer.py` : création (si besoin) du topic `race_results_topic`, récupération des résultats OpenF1 2023, **envoi d’un message toutes les 5 s** (un pilote, une ligne).  
 ![fig5](images/fig5.png)
 
-### 4) (Optionnel) Démarrer le consumer Kafka de contrôle
+### 4)  Démarrer le consumer Kafka de contrôle
 **Figure 6 —** `python kafka_consumer.py` : lecture du topic pour vérifier le flux et la structure des messages (Grand Prix, date, position, driver, laps, DNF, gap, …).  
 ![fig6](images/fig6.png)
 
@@ -117,3 +117,4 @@ streamlit run streamlit-app.py
 
 
 ---
+
